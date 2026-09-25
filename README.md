@@ -29,6 +29,7 @@ energy-demand-forecasting/
 ├── README.md
 ├── requirements.txt
 └── energy_demand_analysis.ipynb
+```
 
 ## Dataset
 
