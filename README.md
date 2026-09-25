@@ -38,18 +38,33 @@ energy-demand-forecasting/
 
 ## Dataset
 
-The project uses historical energy demand data containing observations of electricity consumption over time.
+The analysis uses two historical datasets covering the Baltic countries: Estonia, Latvia, and Lithuania.
 
-The dataset is analysed with respect to:
+### 1. Hourly electricity market data — Syspower
 
-* Date and time
-* Energy demand
-* Daily patterns
-* Weekly patterns
-* Seasonal patterns
-* Long-term trends
+Hourly electricity market data are provided in **Central European Time (CET)**.
 
-> Dataset source: **[ADD DATASET SOURCE HERE]**
+| Variable           | Unit  | Estonia              | Latvia               | Lithuania            |
+| ------------------ | ----- | -------------------- | -------------------- | -------------------- |
+| Electricity demand | GWh   | `CNPEE`              | `CNPLV`              | `CNPLT`              |
+| Wind generation    | MWh   | `PROEEWINDON_ENTSOE` | `PROLVWINDON_ENTSOE` | `PROLTWINDON_ENTSOE` |
+| Solar generation   | MWh   | `PROEESOL_ENTSOE`    | `PROLVSOL_ENTSOE`    | `PROLTSOL_ENTSOE`    |
+| Day-ahead price    | €/MWh | `SPOTEE`             | `SPOTLV`             | `SPOTLT`             |
+
+### 2. Historical weather data
+
+Historical weather data are provided in **Coordinated Universal Time (UTC)**. Weather variables represent **country-wide averages**.
+
+| Variable          | Description                         | Unit |
+| ----------------- | ----------------------------------- | ---- |
+| `t2m`             | Temperature at 2 m above sea level  | °C   |
+| `tp`              | Total precipitation                 | m    |
+| `solar_w_m`       | Solar radiation                     | W/m² |
+| `wind_speed_10m`  | Wind speed at 10 m above sea level  | m/s  |
+| `wind_speed_100m` | Wind speed at 100 m above sea level | m/s  |
+
+> **Time zones:** The electricity market data are provided in CET, while the weather data are provided in UTC. The time zones are taken into account when combining the datasets.
+
 
 ## Exploratory Data Analysis
 
