@@ -23,18 +23,12 @@ The project focuses on:
 energy-demand-forecasting/
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-│   └── energy_demand_analysis.ipynb
-│
-├── src/
-│   └── ...
+│   ├── SyspowerData.csv
+│   └── country_level_historical_data.parquet
 │
 ├── README.md
-└── requirements.txt
-```
+├── requirements.txt
+└── energy_demand_analysis.ipynb
 
 ## Dataset
 
